@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,132 +7,87 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #121212;
+            background-color: #1a1a1a;
             color: #ffffff;
             margin: 0;
-            padding: 15px;
-        }
-        .header {
+            padding: 20px;
             text-align: center;
-            padding: 20px 0;
         }
         h1 {
             color: #ff9800;
-            margin: 0;
+            margin-bottom: 20px;
         }
-        .section-title {
-            font-size: 20px;
-            color: #ff9800;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-            margin-top: 25px;
-        }
-        .menu-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px 0;
-            border-bottom: 1px solid #222;
-        }
-        .menu-item-details {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex: 1;
-        }
-        .menu-item-img {
-            width: 70px;
-            height: 70px;
-            border-radius: 8px;
-            object-fit: cover;
-            background-color: #222;
-        }
-        .menu-item-text {
-            flex: 1;
-        }
-        .menu-item-name {
+        .btn {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 15px auto;
+            padding: 12px;
             font-size: 16px;
             font-weight: bold;
-            margin-bottom: 4px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
         }
-        .menu-item-desc {
-            font-size: 13px;
-            color: #aaaaaa;
-            line-height: 1.4;
+        .btn-call {
+            background-color: #ff9800;
+            color: #ffffff;
         }
-        .menu-item-price {
-            font-size: 15px;
-            font-weight: bold;
+        .btn-glovo {
+            background-color: #ffc107;
+            color: #000000;
+        }
+        .section-title {
             color: #ff9800;
-            white-space: nowrap;
-            margin-left: 10px;
+            margin-top: 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .image-container {
+            margin: 20px auto;
+            max-width: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            background-color: #2a2a2a;
+        }
+        .image-container img {
+            width: 100%;
+            display: block;
+        }
+        .image-caption {
+            background-color: #2a2a2a;
+            padding: 10px;
+            font-size: 14px;
+            color: #ff9800;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Chawarmaz</h1>
-        <p style="color: #888;">Casablanca</p>
+    <h1>CHAWARMAZ</h1>
+
+    <a href="tel:0679602492" class="btn btn-call">📞 Appeler pour commander</a>
+    <a href="https://glovoapp.com" target="_blank" class="btn btn-glovo">💛 Commander via Glovo</a>
+
+    <div class="section-title">NOTRE MENU & SPÉCIALITÉS</div>
+
+    <div class="image-container">
+        <img src="menu.jpg" alt="Carte du Restaurant">
+        <div class="image-caption">📋 Carte du Restaurant</div>
     </div>
 
-    <div class="section-title">Entrées</div>
-
-    <div class="menu-item">
-        <div class="menu-item-details">
-            <img class="menu-item-img" src="salade_chawarma.jpg" alt="Salade Chawarma">
-            <div class="menu-item-text">
-                <div class="menu-item-name">Salade Chawarma</div>
-                <div class="menu-item-desc">Pâtes, chawarma, sauce maison, maïs, olive noire</div>
-            </div>
-        </div>
-        <div class="menu-item-price">36,00 dh</div>
+    <div class="image-container">
+        <img src="chawarma_delice.jpg" alt="Les Nouveautés">
+        <div class="image-caption">🔥 Les Nouveautés</div>
     </div>
 
-    <div class="menu-item">
-        <div class="menu-item-details">
-            <img class="menu-item-img" src="moutabal.jpg" alt="Moutabal">
-            <div class="menu-item-text">
-                <div class="menu-item-name">Moutabal</div>
-                <div class="menu-item-desc">Aubergines, tahini, huile d'olive, citron</div>
-            </div>
-        </div>
-        <div class="menu-item-price">29,00 dh</div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-item-details">
-            <img class="menu-item-img" src="frites.jpg" alt="Frites">
-            <div class="menu-item-text">
-                <div class="menu-item-name">Frites</div>
-                <div class="menu-item-desc">Pommes de terre, huile, sel</div>
-            </div>
-        </div>
-        <div class="menu-item-price">13,00 dh</div>
-    </div>
-
-    <div class="section-title">Tacos</div>
-
-    <div class="menu-item">
-        <div class="menu-item-details">
-            <img class="menu-item-img" src="tacos_chawarma.jpg" alt="Tacos Chawarma">
-            <div class="menu-item-text">
-                <div class="menu-item-name">Tacos Chawarma</div>
-                <div class="menu-item-desc">Tortilla, chawarma, sauce maison</div>
-            </div>
-        </div>
-        <div class="menu-item-price">36,00 dh</div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-item-details">
-            <img class="menu-item-img" src="tacos_crispy.jpg" alt="Tacos Crispy">
-            <div class="menu-item-text">
-                <div class="menu-item-name">Tacos Crispy</div>
-                <div class="menu-item-desc">Tortilla, poulet crispy, sauce maison</div>
-            </div>
-        </div>
-        <div class="menu-item-price">39,00 dh</div>
+    <div class="image-container">
+        <img src="kebab_tacos.jpg" alt="Kebab et Tacos">
+        <div class="image-caption">🌯 Kebab & Tacos</div>
     </div>
 
 </body>
