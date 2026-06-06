@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Shawarma Casablanca - Guide des meilleurs restos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000') no-repeat center center/cover;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #ff9f43;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #ff9f43;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 600px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .restaurant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .restaurant-card {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            border: 1px solid #2d2d2d;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .restaurant-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff9f43;
+        }
+
+        .card-header {
+            padding: 20px;
+            border-bottom: 1px solid #2d2d2d;
+            position: relative;
+        }
+
+        .restaurant-name {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .meta-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        .badge-status {
+            background-color: #2ed573;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: #bbb;
+            background-color: #222;
+            padding: 12px;
+            border-left: 3px solid #ff9f43;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .details-list {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .details-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-footer {
+            padding: 20px;
+            background-color: #141414;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Buttons styles */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: background 0.2s ease;
+        }
+
+        .btn-maps { background-color: #4285F4; }
+        .btn-maps:hover { background-color: #357ae8; }
+
+        .btn-call { background-color: #ff4757; }
+        .btn-call:hover { background-color: #e84118; }
+        
+        .btn-web { background-color: #ff9f43; color: #000; }
+        .btn-web:hover { background-color: #feca57; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #050505;
+            color: #666;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            border-top: 1px solid #111;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Casablanca Shawarma Guide</h1>
+        <p>Découvrez les spots de shawarma les mieux notés à Casablanca, testés et approuvés par la communauté.</p>
+    </header>
+
+    <div class="container">
+        <div class="restaurant-grid">
+
+            <div class="restaurant-card">
+                <div class="card-header">
+                    <h2 class="restaurant-name">Hello Shawarma</h2>
+                    <div class="meta-info">
+                        <span class="rating">⭐ 4.8 (30 avis)</span>
+                        <span class="badge-status">Ouvert</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="review-text">"Très bonne chawarma et de plus le service est bien a refaire inchaalah"</p>
+                    <ul class="details-list">
+                        <li>📍 Rue Zaid Bnou Rifaa, Maârif</li>
+                        <li>💰 1–50 MAD · Cuisine Libanaise</li>
+                        <li>🕒 Ferme à 02:00</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://maps.google.com/?cid=10693518292006470685&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-maps">🗺️ Itinéraire / Maps</a>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="card-header">
+                    <h2 class="restaurant-name">AL Crunch</h2>
+                    <div class="meta-info">
+                        <span class="rating">⭐ 4.4 (339 avis)</span>
+                        <span class="badge-status">Ouvert</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="review-text">"Machallah vous avez une très bonne plat et de bon service"</p>
+                    <ul class="details-list">
+                        <li>📍 Lotissement Selouane, El Oulfa</li>
+                        <li>💰 50–100 MAD · Restaurant</li>
+                        <li>🕒 Ferme à 02:00</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="tel:+212522100222" class="btn btn-call">📞 Appeler (+212 522-100222)</a>
+                    <a href="https://maps.google.com/?cid=15835467462422099607&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-maps">🗺️ Itinéraire / Maps</a>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="card-header">
+                    <h2 class="restaurant-name">Chawarma Canaan</h2>
+                    <div class="meta-info">
+                        <span class="rating">⭐ 4.6 (623 avis)</span>
+                        <span class="badge-status">Ouvert</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="review-text">"Ambiance calme, personnel accueillant et shawarma très délicieuse 😋"</p>
+                    <ul class="details-list">
+                        <li>📍 4 Rue Al Kassar, Maârif</li>
+                        <li>💰 1–50 MAD · Restaurant</li>
+                        <li>🕒 Ferme à 01:00</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="tel:+212663315521" class="btn btn-call">📞 Appeler</a>
+                    <a href="https://maps.google.com/?cid=15161510917082677957&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-maps">🗺️ Itinéraire / Maps</a>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="card-header">
+                    <h2 class="restaurant-name">Shawarma Lma3louma</h2>
+                    <div class="meta-info">
+                        <span class="rating">⭐ 4.5 (1,6k avis)</span>
+                        <span class="badge-status">Ouvert</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="review-text">"Shawarma très spécial, coin propre, service à temps, je recommande vraiment."</p>
+                    <ul class="details-list">
+                        <li>📍 10 Rue Ibnou Faris, Maârif</li>
+                        <li>💰 50–100 MAD · Restaurant</li>
+                        <li>🕒 Ferme à 00:30</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="tel:+212769752780" class="btn btn-call">📞 Appeler</a>
+                    <a href="https://maps.google.com/?cid=13232552102068028406&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-maps">🗺️ Itinéraire / Maps</a>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="card-header">
+                    <h2 class="restaurant-name">Shawarma Avenue</h2>
+                    <div class="meta-info">
+                        <span class="rating">⭐ 4.0 (184 avis)</span>
+                        <span class="badge-status">Ouvert</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="review-text">"Votre shawarma est délicieux et je reviendrai avec plaisir."</p>
+                    <ul class="details-list">
+                        <li>📍 6 Rue El Kadi Lass, Maârif</li>
+                        <li>💰 50–100 MAD · Restauration rapide</li>
+                        <li>🕒 Ferme à 04:00</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://www.shawarmavenue.ma/" target="_blank" class="btn btn-web">🌐 Visiter le Site Web</a>
+                    <a href="https://maps.google.com/?cid=8281322202209250296&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-maps">🗺️ Itinéraire / Maps</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Casablanca Shawarma Guide. Développé avec passion.</p>
+    </footer>
+
+</body>
+</html>
